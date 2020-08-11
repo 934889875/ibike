@@ -1,0 +1,47 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	
+<title>修改单车</title>
+</head>
+<body>
+<article class="page-container">
+	<form action="/bike?op=update" class="form form-horizontal" id="form-user-edit">
+		<input id="uid" type="hidden" name="id"/>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>单车编号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" id="username" name="name" />
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>单车状态：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<span class="select-box">
+					<select class="select" size="1" id="userType" name="type">
+						<option value="未启用 " selected>未启用 </option>
+						<option value="启用且未开锁">启用且未开锁</option>
+						<option value="开锁使用中 ">开锁使用中</option>
+						<option value="报修中">报修中</option>
+						<option value="骑行">骑行</option>
+					</select>
+				</span>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">备注：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<textarea id="desc" name="description" cols="" rows="" class="textarea"></textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;修改&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+
+</body>
+</html>
